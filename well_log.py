@@ -7,31 +7,25 @@ Created on Tue Sep 27 17:10:08 2022
 
 
 #Importing libraries
-#import itertools
 import pandas as pd
-#import numpy as np
 import matplotlib.pyplot as plt
 
 word_start = '~Ascii'
 
 #Opening .txt file
 with open("X_well_log.las","r") as infile:
+    
     #Reading line by line
-    #for line in enumerate(infile):
     for idx,line in enumerate(infile):
 
         content = infile.readlines()
-            #content = infile.read().replace('@','').replace('*','').splitlines()
-            #replace('@','') --> Removes the '@' character
-            #content = infile.read()[100:]
-            #content = content.replace('@','')
-            #content = content.replace('*','')
 
         #Knowing total number of lines
         print("Number of lines is {}".format(len(content)))
         #print(content)
         
         data = content[30:]
+        
         #Knowing total number of lines
         print("Number of lines is {}".format(len(data)))
         
